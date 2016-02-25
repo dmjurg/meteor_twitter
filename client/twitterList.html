@@ -1,14 +1,22 @@
 <head>
-  <title>twitterList</title>
+  <title>Who Was There?</title>
 </head>
-
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  <div class="container">
+    <div class="row">
+    <div class="span6">
+      <div class="well">
+        <h4>Did you go to the <a href="http://www.930.com/event/1027899-lone-bellow-washington/">Lone Bellow Show</a>? Sign in with Twitter to add your name.</h4>
+        {{> loginButtons}}
+      </div>
+      <table class="table">
+        <tr>
+          <td>
+            <a target="_blank" href="http://twitter.com/{{userName}}"><img src="{{image}}"/> {{fullName}}</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    </div>
+  </div>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
